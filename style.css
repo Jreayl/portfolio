@@ -1,16 +1,42 @@
 *, *::before, *::after {
     box-sizing: border-box;
-    color: white;
+    color: #47597E;
 }
 
 section {
-    border: solid 1px red;
+    /* border: solid 1px red; */
+    background-color: #FFFFFF;
+}
+
+.page-section h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 7rem;
+    font-weight: 700;
+    padding-bottom: .25rem;
+    color: #47597E;
+}
+
+.page-section h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #47597E;
+}
+
+hr {
+    margin-bottom: 1.5rem;
+}
+
+.page-section p {
+    font-family: 'Roboto', sans-serif;
+    color: #B2AB8C;
 }
 
 .container {
     width: 100%;
     height: 100%;
-    border: solid yellow 1px;
+    /* border: solid yellow 1px; */
     text-align: center;
     justify-content: center;
     align-content: center;
@@ -21,62 +47,112 @@ section {
     padding: 6rem 0;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
+#test {
+    color: #47597E;
+}
+
+/* Navbar */
+
+.navbar {
+    /* color: #FFFFFF; */
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+}
+
+.bi .bi-house {
+    color: #47597E;
+}
+
+.bi .bi-house:hover {
+    color: #1d2533;
+}
+
+.navbar-brand .active {
+    color: #47597E;
+}
+
+.nav-link {
+    color: #47597E;
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color: #1d2533;
+}
+
+/* Header */
+
 #header-block {
     display: block;
     height: 3.6rem;
 }
 
+/* Hero Section */
+
 #hero {
-    background-image: url(assets/hero-img-header.jpg);
+    background-image: url(assets/hero-banner.jpg);
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #hero .container {
     display: grid;
     place-items: center;
-    border: solid purple 1px;
+    /* border: solid purple 1px; */
     margin-top: 9vh;
     margin-bottom: 9vh;
 }
 
 #hero .container #self-img {
     width: 14rem;
-    border: solid gray 10px;
+    border: solid #DBE6FD 10px;
     border-radius: 50%;
 }
 
 #hero .hero-section-heading {
     line-height: 4rem;
     font-size: 3rem;
+    color: #DBE6FD;
 }
 
 #hero .hero-section-subheading {
+    font-family: 'Oswald', sans-serif;
     font-size: 1.5rem;
+    color: #DBE6FD;
 }
+
+/* About Section */
 
 .about-section {
     background: green;
 }
 
 #about .container img {
-    border: solid 1px green;
+    /* border: solid 1px green; */
+    border-radius: 15px 15px 15px 15px;
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin-bottom: 5vh;
 }
 
-.about-p {
+.about-text-container {
     position: relative;
+    border: solid 1px red;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: solid green 1px;
+    font-size: clamp(10px, 15px, 25px);
 }
 
-.about-p p {
-    font-size: 1.25rem;
-}
+/* Skills Section */
 
 .skills-section {
     background: blue;
@@ -88,10 +164,6 @@ section {
     align-items: center;
 }
 
-.skill-container {
-    border: solid red 1px;
-}
-
 .skill-container img {
     width: 10vw;
 }
@@ -100,9 +172,6 @@ section {
     
 }
 
-.inspiration-section {
-    background: purple;
-}
 
 .skill-icon {
     border: solid red 1px;
@@ -114,7 +183,7 @@ section {
 
 footer {
     height: 50px;
-    border: solid red 1px;
+    background-color: #47597E;
 }
 
 footer .copywright {
@@ -122,10 +191,13 @@ footer .copywright {
     place-items: center;
     width: 100%;
     height: 100%;
+    color: white;
+    background-size: cover;
 }
 
 
 .carousel-item img {
+    border-radius: 15px 15px 15px 15px;
     height: 600px;
     width: 900px;
     object-fit: cover;
