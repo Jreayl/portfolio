@@ -51,17 +51,20 @@ a:hover {
     text-decoration: none;
 }
 
-#test {
-    color: #47597E;
-}
-
 /* Navbar */
+
+#test {
+    color: #1d2533;
+}
 
 .navbar {
     /* color: #FFFFFF; */
-    -webkit-box-shadow: 0 8px 6px -6px #999;
-    -moz-box-shadow: 0 8px 6px -6px #999;
     box-shadow: 0 8px 6px -6px #999;
+}
+
+.navbar-container {
+    margin-left: 2vw;
+    margin-right: 2vw;
 }
 
 .bi .bi-house {
