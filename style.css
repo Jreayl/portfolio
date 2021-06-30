@@ -1,6 +1,5 @@
 *, *::before, *::after {
     box-sizing: border-box;
-    color: #47597E;
 }
 
 section {
@@ -52,31 +51,27 @@ a:hover {
 }
 
 /* Navbar */
+.navbar-toggler {
+    color: #47597E;
+}
 
-#test {
+.navbar-brand i {
+    color: #47597E;
+}
+
+.navbar-brand i:hover {
     color: #1d2533;
 }
 
 .navbar {
-    /* color: #FFFFFF; */
-    box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #1d2533;
 }
-
-.navbar-container {
-    margin-left: 2vw;
-    margin-right: 2vw;
-}
-
 .bi .bi-house {
     color: #47597E;
 }
 
 .bi .bi-house:hover {
     color: #1d2533;
-}
-
-.navbar-brand .active {
-    color: #47597E;
 }
 
 .nav-link {
