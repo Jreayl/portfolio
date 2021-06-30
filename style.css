@@ -2,6 +2,12 @@
     box-sizing: border-box;
 }
 
+:root {
+    --small: 576px;
+    --medium: 768px;
+    --large: 992px;
+}
+
 section {
     /* border: solid 1px red; */
     background-color: #FFFFFF;
@@ -30,6 +36,7 @@ hr {
 .page-section p {
     font-family: 'Roboto', sans-serif;
     color: #B2AB8C;
+    color: black;
 }
 
 .container {
@@ -132,7 +139,6 @@ a:hover {
 }
 
 #about .container img {
-    /* border: solid 1px green; */
     border-radius: 15px 15px 15px 15px;
     position: relative;
     top: 50%;
@@ -152,32 +158,137 @@ a:hover {
 
 /* Skills Section */
 
-.skills-section {
-    background: blue;
-}
-
-#skills-container {
-    justify-content: center;
+#skills-container .row {
+    justify-content: space-evenly;
     align-content: center;
-    align-items: center;
-}
-
-.skill-container img {
-    width: 10vw;
-}
-
-.skill-container p {
-    
+    border: solid 1px purple;
 }
 
 
-.skill-icon {
-    border: solid red 1px;
+.skill-container {
+    border: solid 1px red;
 }
+
+.skill-container .skill-icon {
+    border: solid 1px green;
+    /* width: 100px; */
+}
+
+.skill-text-container {
+    border: solid yellow 1px;
+}
+
+
+/* Bootstrap: 
+    sm: >= 576px
+    md: >= 768px;
+    lg: >= 992px;
+*/
+
+/* On screens that are 992px or less, set the background color to blue */
+/* @media screen and (max-width: 992px) {
+    body {
+      background-color: blue;
+    }
+} */
+  
+  /* On screens that are 600px or less, set the background color to olive */
+  /* @media screen and (max-width: 600px) {
+    body {
+      background-color: olive;
+    }
+} */
+
+/* On screens that are extra-small (less than 576px), set the content sizes */
+@media screen and (max-width: 576px) {
+    #skills-container .row {
+        justify-content: center;
+        border: solid brown 1px;
+    }
+
+    #skills-container .skill-icon {
+        width: 30vw;
+    }
+
+    #skills-container .skill-text-container {
+        padding: 2.5vw 20vw 0 20vw;
+    }
+}
+
+/* On screens that are small (576 px or less), set the content sizes */
+@media screen and (min-width: 576px) {
+    #skills-container .row {
+        justify-content: space-evenly;
+        border: solid orange 1px;
+    }
+
+    #skills-container .skill-icon {
+        width: 25vw;
+    }
+
+    #skills-container .skill-text-container {
+        padding: 2.5vw 15vw 0 15vw;
+    }
+}
+
+/* On screens that are medium (768 px or less), set the content sizes */
+@media screen and (min-width: 768px) {
+    #skills-container .row {
+        justify-content: space-evenly;
+        align-content: center;
+        border: solid 1px blue;
+    }
+
+    #skills-container .skill-icon {
+        width: 15vw;
+    }
+
+    #skills-container .skill-text-container {
+        padding: 2.5vw 10vw 0 10vw;
+    }
+} 
+
+/* On screens that are large (992px or less), set the content sizes */
+@media screen and (min-width: 992px) {
+    #skills-container .row {
+        justify-content: space-evenly;
+        align-content: center;
+        border: solid 1px green;
+    }
+
+    #skills-container .skill-icon {
+        width: 8vw;
+        /* height: 8vw; */
+        margin-bottom: 2vh;
+    }
+
+    #skills-container .skill-container {
+        /* width: 15vw; */
+    }
+
+    #skills-container .skill-text-container {
+        /* width: 1 */
+
+    }
+}
+
+
+
+/* Inspiration Section */
+.carousel-item img {
+    border-radius: 15px 15px 15px 15px;
+    height: 700px;
+    width: 800px;
+    object-fit: cover;
+}
+
+/* Contact Section */
 
 .contact-methods {
     justify-content: center;
 }
+
+/* Footer */
 
 footer {
     height: 50px;
@@ -191,12 +302,4 @@ footer .copywright {
     height: 100%;
     color: white;
     background-size: cover;
-}
-
-
-.carousel-item img {
-    border-radius: 15px 15px 15px 15px;
-    height: 600px;
-    width: 900px;
-    object-fit: cover;
 }
