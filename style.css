@@ -25,7 +25,7 @@ section {
     font-family: 'Oswald', sans-serif;
     font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    margin-bottom: 10vh;
     color: #47597E;
 }
 
@@ -36,13 +36,14 @@ hr {
 .page-section p {
     font-family: 'Roboto', sans-serif;
     color: #B2AB8C;
-    color: black;
+    color: #47597E;
+    font-weight: 800;
+    /* font-size: 125%; */
 }
 
 .container {
     width: 100%;
     height: 100%;
-    /* border: solid yellow 1px; */
     text-align: center;
     justify-content: center;
     align-content: center;
@@ -51,6 +52,7 @@ hr {
 
 .page-section {
     padding: 6rem 0;
+    background-color: whitesmoke;
 }
 
 a:hover {
@@ -58,12 +60,17 @@ a:hover {
 }
 
 /* Navbar */
+.navbar {
+    background-color: whitesmoke;
+}
+
 .navbar-toggler {
     color: #47597E;
 }
 
 .navbar-brand i {
     color: #47597E;
+    font-size: 1.5rem;
 }
 
 .navbar-brand i:hover {
@@ -71,10 +78,7 @@ a:hover {
 }
 
 .navbar {
-    box-shadow: 0 8px 6px -6px #1d2533;
-}
-.bi .bi-house {
-    color: #47597E;
+    box-shadow: 0 8px 6px -6px #1d253370;
 }
 
 .bi .bi-house:hover {
@@ -83,7 +87,8 @@ a:hover {
 
 .nav-link {
     color: #47597E;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 1.1rem;
 }
 
 .nav-link:hover {
@@ -121,6 +126,7 @@ a:hover {
 }
 
 #hero .hero-section-heading {
+    font-family: 'Oswald', sans-serif;
     line-height: 4rem;
     font-size: 3rem;
     color: #DBE6FD;
@@ -134,10 +140,6 @@ a:hover {
 
 /* About Section */
 
-.about-section {
-    background: green;
-}
-
 #about .container img {
     border-radius: 15px 15px 15px 15px;
     position: relative;
@@ -149,11 +151,27 @@ a:hover {
 
 .about-text-container {
     position: relative;
-    border: solid 1px red;
+    /* border: solid 1px red; */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: clamp(10px, 15px, 25px);
+}
+
+/* On screens that are medium (768 px or less), set the content sizes */
+@media screen and (min-width: 768px) {
+
+}
+
+/* On screens that are large (992px or less), set the content sizes */
+@media screen and (min-width: 992px) {
+    #about .container img {
+        width: 60vw;
+    }
+
+    .about-text-container {
+        font-size: 1.2rem;
+        padding: 3rem;
+    }
 }
 
 /* Skills Section */
@@ -161,57 +179,53 @@ a:hover {
 #skills-container .row {
     justify-content: space-evenly;
     align-content: center;
-    border: solid 1px purple;
 }
 
-
 .skill-container {
-    border: solid 1px red;
+    width: 100%;
+    margin-bottom: 4rem;
 }
 
 .skill-container .skill-icon {
-    border: solid 1px green;
-    /* width: 100px; */
+    width: 75%;
+    margin-bottom: 2vh;
+    filter: grayscale(35%) sepia(35%);
 }
 
 .skill-text-container {
-    border: solid yellow 1px;
+    width: 100%;
 }
 
+#bootstrap {
+    background: linear-gradient(to right, rgba(85, 9, 156, .75), rgba(65, 6, 175, 0.75));
+    border-radius: 20px 20px 20px 20px;
+    /* background-color: rgb(65, 9, 156); */
+}
 
-/* Bootstrap: 
+#js {
+    background-color: rgba(0, 0, 0, 0.856);
+    border-radius: 20px 20px 20px;
+}
+
+/* Bootstrap breakpoints: 
+    sxm: < 576px
     sm: >= 576px
-    md: >= 768px;
-    lg: >= 992px;
+    md: >= 768px
+    lg: >= 992px
 */
-
-/* On screens that are 992px or less, set the background color to blue */
-/* @media screen and (max-width: 992px) {
-    body {
-      background-color: blue;
-    }
-} */
-  
-  /* On screens that are 600px or less, set the background color to olive */
-  /* @media screen and (max-width: 600px) {
-    body {
-      background-color: olive;
-    }
-} */
 
 /* On screens that are extra-small (less than 576px), set the content sizes */
 @media screen and (max-width: 576px) {
     #skills-container .row {
         justify-content: center;
-        border: solid brown 1px;
     }
 
-    #skills-container .skill-icon {
-        width: 30vw;
+    .skill-container .skill-icon {
+        width: 35%;
     }
 
-    #skills-container .skill-text-container {
-        padding: 2.5vw 20vw 0 20vw;
+    .skill-text-container {
+        padding: 0 50px 0 50px;
     }
 }
 
@@ -219,15 +233,18 @@ a:hover {
 @media screen and (min-width: 576px) {
     #skills-container .row {
         justify-content: space-evenly;
-        border: solid orange 1px;
     }
 
-    #skills-container .skill-icon {
-        width: 25vw;
+    .skill-container .skill-icon {
+        width: 35%;
     }
 
-    #skills-container .skill-text-container {
-        padding: 2.5vw 15vw 0 15vw;
+    .skill-container {
+        text-align: center;
+    }
+
+    .skill-text-container {
+        padding: 0 100px 0 100px;
     }
 }
 
@@ -236,15 +253,10 @@ a:hover {
     #skills-container .row {
         justify-content: space-evenly;
         align-content: center;
-        border: solid 1px blue;
     }
 
-    #skills-container .skill-icon {
-        width: 15vw;
-    }
-
-    #skills-container .skill-text-container {
-        padding: 2.5vw 10vw 0 10vw;
+    .skill-text-container {
+        padding: 0 50px 0 50px;
     }
 } 
 
@@ -253,39 +265,71 @@ a:hover {
     #skills-container .row {
         justify-content: space-evenly;
         align-content: center;
-        border: solid 1px green;
     }
 
-    #skills-container .skill-icon {
-        width: 8vw;
-        /* height: 8vw; */
-        margin-bottom: 2vh;
+    #skills-container .row .col-lg-1 {
+        width: 200px;
     }
 
-    #skills-container .skill-container {
-        /* width: 15vw; */
+    .skill-container .skill-icon {
+        width: 75%;
     }
 
-    #skills-container .skill-text-container {
-        /* width: 1 */
-
+    .skill-text-container {
+        padding: 0;
     }
 }
 
-
-
 /* Inspiration Section */
 .carousel-item img {
-    border-radius: 15px 15px 15px 15px;
     height: 700px;
     width: 800px;
     object-fit: cover;
+    filter: brightness(40%);
+}
+
+.carousel-caption {
+    /* background-color: #47597e79; */
+    border-radius: 20px 20px 20px 20px;
+    margin-bottom: 3rem;
+}
+
+.carousel-caption h5 {
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+}
+
+.carousel-caption p {
+    font-size: 1.1rem;
+}
+
+.carousel-caption p, h5 {
+    color: white;
+    font-weight: 600;
+    text-shadow: 2px 2px #1d2533;
+}
+
+.carousel-control-next-icon {
+    color: #47597E;
 }
 
 /* Contact Section */
 
 .contact-methods {
     justify-content: center;
+}
+
+.contact-methods .col-md-1 {
+    margin-inline: 3rem;
+}
+
+.contact-link {
+    color: #47597E;
+    font-size: 4rem;
+}
+
+.contact-link:hover {
+    color: #1d2533;
 }
 
 /* Footer */
@@ -302,4 +346,6 @@ footer .copywright {
     height: 100%;
     color: white;
     background-size: cover;
+    font-size: 1.1rem;
+    font-weight: 600;
 }
