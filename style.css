@@ -2,20 +2,18 @@
     box-sizing: border-box;
 }
 
-:root {
-    --small: 576px;
-    --medium: 768px;
-    --large: 992px;
+body {
+    position: relative;
 }
 
 section {
-    /* border: solid 1px red; */
+    position: relative;
     background-color: #FFFFFF;
 }
 
 .page-section h1 {
     font-family: 'Oswald', sans-serif;
-    font-size: 7rem;
+    font-size: 8rem;
     font-weight: 700;
     padding-bottom: .25rem;
     color: #47597E;
@@ -23,14 +21,25 @@ section {
 
 .page-section h2 {
     font-family: 'Oswald', sans-serif;
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
-    margin-bottom: 10vh;
+    /* margin-bottom: 10vh; */
     color: #47597E;
+    text-shadow: 1.5px 1.5px #1d2533;
 }
 
-hr {
-    margin-bottom: 1.5rem;
+.page-section h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.75rem;
+    margin-top: -2.5vh;
+    margin-left: 6rem;
+    font-weight: 700;
+    margin-bottom: 10vh;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.section-header {
+    text-align: center;
 }
 
 .page-section p {
@@ -38,7 +47,6 @@ hr {
     color: #B2AB8C;
     color: #47597E;
     font-weight: 800;
-    /* font-size: 125%; */
 }
 
 .container {
@@ -62,6 +70,8 @@ a:hover {
 /* Navbar */
 .navbar {
     background-color: whitesmoke;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
 }
 
 .navbar-toggler {
@@ -89,6 +99,14 @@ a:hover {
     color: #47597E;
     font-weight: 700;
     font-size: 1.1rem;
+    border-radius: 7.5px 7.5px 7.5px 7.5px;
+}
+
+.nav-link.active {
+    background-color: #1d2533;
+    background-color: #47597E;
+    color: #1d2533;
+    color: whitesmoke;
 }
 
 .nav-link:hover {
@@ -99,7 +117,8 @@ a:hover {
 
 #header-block {
     display: block;
-    height: 3.6rem;
+    /* height: 3.6rem; */
+    height: 52.4px;
 }
 
 /* Hero Section */
@@ -114,64 +133,59 @@ a:hover {
 #hero .container {
     display: grid;
     place-items: center;
-    /* border: solid purple 1px; */
     margin-top: 9vh;
     margin-bottom: 9vh;
 }
 
 #hero .container #self-img {
     width: 14rem;
-    border: solid #DBE6FD 10px;
+    border: solid whitesmoke 10px;
+    margin-bottom: 1.5rem;
     border-radius: 50%;
 }
 
 #hero .hero-section-heading {
     font-family: 'Oswald', sans-serif;
     line-height: 4rem;
-    font-size: 3rem;
-    color: #DBE6FD;
+    font-size: 3.5rem;
+    text-shadow: 2px 2px black;
+    /* color: #DBE6FD; */
+    color: whitesmoke;
 }
 
 #hero .hero-section-subheading {
     font-family: 'Oswald', sans-serif;
-    font-size: 1.5rem;
-    color: #DBE6FD;
+    font-size: 1.75rem;
+    text-shadow: 2px 2px black;
+    /* color: #DBE6FD; */
+    color: whitesmoke;
 }
 
 /* About Section */
 
+#about .about-img-container {
+    display: flex;
+}
+
+#about h3 {
+    margin-bottom: 1vh;
+}
+
 #about .container img {
-    border-radius: 15px 15px 15px 15px;
+    border-radius: 20px;
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-bottom: 5vh;
+    margin-bottom: 18vh;
 }
 
 .about-text-container {
     position: relative;
-    /* border: solid 1px red; */
+    text-align: left;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-/* On screens that are medium (768 px or less), set the content sizes */
-@media screen and (min-width: 768px) {
-
-}
-
-/* On screens that are large (992px or less), set the content sizes */
-@media screen and (min-width: 992px) {
-    #about .container img {
-        width: 60vw;
-    }
-
-    .about-text-container {
-        font-size: 1.2rem;
-        padding: 3rem;
-    }
 }
 
 /* Skills Section */
@@ -179,6 +193,10 @@ a:hover {
 #skills-container .row {
     justify-content: space-evenly;
     align-content: center;
+}
+
+#skills h3 {
+    margin-left: 5rem;
 }
 
 .skill-container {
@@ -197,9 +215,8 @@ a:hover {
 }
 
 #bootstrap {
-    background: linear-gradient(to right, rgba(85, 9, 156, .75), rgba(65, 6, 175, 0.75));
+    background: linear-gradient(to right, rgba(92, 28, 153, 0.75), rgba(65, 6, 175, 0.75));
     border-radius: 20px 20px 20px 20px;
-    /* background-color: rgb(65, 9, 156); */
 }
 
 #js {
@@ -207,89 +224,20 @@ a:hover {
     border-radius: 20px 20px 20px;
 }
 
-/* Bootstrap breakpoints: 
-    sxm: < 576px
-    sm: >= 576px
-    md: >= 768px
-    lg: >= 992px
-*/
-
-/* On screens that are extra-small (less than 576px), set the content sizes */
-@media screen and (max-width: 576px) {
-    #skills-container .row {
-        justify-content: center;
-    }
-
-    .skill-container .skill-icon {
-        width: 35%;
-    }
-
-    .skill-text-container {
-        padding: 0 50px 0 50px;
-    }
-}
-
-/* On screens that are small (576 px or less), set the content sizes */
-@media screen and (min-width: 576px) {
-    #skills-container .row {
-        justify-content: space-evenly;
-    }
-
-    .skill-container .skill-icon {
-        width: 35%;
-    }
-
-    .skill-container {
-        text-align: center;
-    }
-
-    .skill-text-container {
-        padding: 0 100px 0 100px;
-    }
-}
-
-/* On screens that are medium (768 px or less), set the content sizes */
-@media screen and (min-width: 768px) {
-    #skills-container .row {
-        justify-content: space-evenly;
-        align-content: center;
-    }
-
-    .skill-text-container {
-        padding: 0 50px 0 50px;
-    }
-} 
-
-/* On screens that are large (992px or less), set the content sizes */
-@media screen and (min-width: 992px) {
-    #skills-container .row {
-        justify-content: space-evenly;
-        align-content: center;
-    }
-
-    #skills-container .row .col-lg-1 {
-        width: 200px;
-    }
-
-    .skill-container .skill-icon {
-        width: 75%;
-    }
-
-    .skill-text-container {
-        padding: 0;
-    }
-}
-
 /* Inspiration Section */
+#inspiration h3 {
+    margin-left: 12rem;
+}
+
 .carousel-item img {
     height: 700px;
     width: 800px;
     object-fit: cover;
     filter: brightness(40%);
+    border-radius: 20px;
 }
 
 .carousel-caption {
-    /* background-color: #47597e79; */
     border-radius: 20px 20px 20px 20px;
     margin-bottom: 3rem;
 }
@@ -314,9 +262,87 @@ a:hover {
 }
 
 /* Contact Section */
+@keyframes scaleContactMethods {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% {transform: scale(1); }
+}
+
+#contact h3 {
+    margin-left: 8.5rem;
+}
 
 .contact-methods {
     justify-content: center;
+}
+
+.contact-form-container {
+    display: grid;
+    place-items: center;
+    margin-bottom: 3rem;
+}
+
+.contact-form-wrapper {
+    width: clamp(350px, 55%, 35vw);
+    height: 100%;
+    border: solid #B2AB8C 5px;
+    background-color: #47597E;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.contact-form-wrapper .row {
+    margin-bottom: 1.5rem;
+    justify-content: center;
+}
+
+.contact-form-wrapper h5 {
+    text-align: left;
+    margin-bottom: .8rem;
+    color: whitesmoke;
+    text-shadow: none;
+    font-weight: 500;
+    margin-left: .425rem;
+}
+
+.contact-form-wrapper input {
+    min-height: 50px;
+    border-radius: 5px;
+    width: 95%;
+    overflow: hidden;
+}
+
+.contact-form-wrapper textarea {
+    min-height: 100px;
+    width: 95%;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form-wrapper button {
+    width: clamp(100px, 125px, 25%);
+    height: 45px;
+    font-weight: 700;
+    color: #47597E;
+    background-color: whitesmoke;
+    outline: none;
+}
+
+.contact-form-wrapper button:hover {
+    background-color: rgba(245, 245, 245, 0.658);
+}
+
+.github-container, .linkedin-container, .discord-container {
+    /* width: 100%;
+    height: 100%; */
+    animation-name: scaleContactMethods;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-play-state: paused;
+}
+
+.github-container:hover, .linkedin-container:hover, .discord-container:hover {
+    animation-play-state: running;
 }
 
 .contact-methods .col-md-1 {
@@ -330,6 +356,7 @@ a:hover {
 
 .contact-link:hover {
     color: #1d2533;
+    cursor: pointer;
 }
 
 /* Footer */
@@ -344,8 +371,177 @@ footer .copywright {
     place-items: center;
     width: 100%;
     height: 100%;
-    color: white;
+    color: whitesmoke;
     background-size: cover;
     font-size: 1.1rem;
     font-weight: 600;
+}
+
+/* Bootstrap breakpoints: 
+    xsm: < 576px
+    sm: >= 576px
+    md: >= 768px
+    lg: >= 992px
+*/
+
+/* On screens that are extra-small (less than 576px), set the content sizes */
+@media screen and (max-width: 576px) {
+    #hero .container #self-img {
+        width: 11rem;
+    }
+
+    #hero .hero-section-heading {
+        font-size: 9.5vw;
+    }
+
+    #hero .hero-section-subheading {
+        font-size: 3.5vw;
+    }
+
+    .about-text-container {
+        padding-left: 1.5vw;
+        padding-right: 1.5vw;
+        font-size: .85rem;
+    }
+
+    #skills-container .row {
+        justify-content: center;
+    }
+
+    .skill-container .skill-icon {
+        width: 35%;
+    }
+
+    .skill-text-container {
+        padding: 0 50px 0 50px;
+        font-size: .85rem;
+    }
+
+    .contact-link {
+        font-size: 3rem;
+    }
+}
+
+/* On screens that are small (576 px or less), set the content sizes */
+@media screen and (min-width: 576px) {
+    #hero .container #self-img {
+        width: 12rem;
+    }
+
+    #hero .hero-section-heading {
+        font-size: 9vw;
+    }
+
+    #hero .hero-section-subheading {
+        font-size: 3.25vw;
+    }
+
+    .about-text-container {
+        padding-left: 1.5vw;
+        padding-right: 1.5vw;
+        font-size: .85rem;
+    }
+
+    #skills-container .row {
+        justify-content: space-evenly;
+    }
+
+    .skill-container .skill-icon {
+        width: 35%;
+    }
+
+    .skill-container {
+        text-align: center;
+    }
+
+    .skill-text-container {
+        padding: 0 100px 0 100px;
+        font-size: .8rem;
+    }
+
+    .contact-link {
+        font-size: 3.75rem;
+    }
+}
+
+/* On screens that are medium (768 px or less), set the content sizes */
+@media screen and (min-width: 768px) {
+    #hero .container #self-img {
+        width: 13rem;
+    }
+
+    #hero .hero-section-heading {
+        font-size: 7vw;
+    }
+
+    #hero .hero-section-subheading {
+        font-size: 2.5vw;
+    }
+
+    #about .container img {
+        width: 100%;
+        margin-right: 2rem;
+    }
+
+    .about-text-container {
+        font-size: .9rem;
+    }
+    
+    #skills-container .row {
+        justify-content: space-evenly;
+        align-content: center;
+    }
+
+    .skill-text-container {
+        padding: 0 50px 0 50px;
+        font-size: .85rem;
+    }
+
+    .contact-link {
+        font-size: 3.75rem;
+    }
+} 
+
+/* On screens that are large (992px or less), set the content sizes */
+@media screen and (min-width: 992px) {
+    #hero .container #self-img {
+        width: 14rem;
+    }
+
+    #hero .hero-section-heading {
+        font-size: 4.25vw;
+    }
+
+    #hero .hero-section-subheading {
+        font-size: 1.75vw;
+    }
+
+    #about .container img {
+        width: 80%;
+    }
+
+    .about-text-container {
+        font-size: 1.1rem;
+    }
+
+    #skills-container .row {
+        justify-content: space-evenly;
+        align-content: center;
+    }
+
+    #skills-container .row .col-lg-1 {
+        width: 200px;
+    }
+
+    .skill-container .skill-icon {
+        width: 75%;
+    }
+
+    .skill-text-container {
+        padding: 0;
+    }
+
+    .contact-link {
+        font-size: 4rem;
+    }
 }
